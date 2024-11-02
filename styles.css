@@ -1,0 +1,107 @@
+@import url('https://fonts.cdnfonts.com/css/satoshi');
+
+* {
+    font-family: 'Satoshi', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    margin: 0;
+    background: linear-gradient(180deg, #b291e1, #5f27ae);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: row;
+    gap: 130px;
+    width: 100%;
+    max-width: 90%;
+    padding: 0 25px 0 25px;
+    height: 84px;
+    margin: 54px 183px 0 183px;
+    border-radius: 30px;
+    font-size: 30px;
+    color: #ffff;
+    text-decoration: none;
+    background-color: rgba(95.47, 39.21, 174.25, 0.30);
+    box-shadow: 0px 0px 30px rgba(95, 39, 174, 0.3);
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #EEEEEE;
+    background-color: none;
+    transition: 0.3s color;
+    transition-delay: 0;
+}
+
+.navbar :hover {
+    text-decoration: underline #b291e1;
+    color: #b291e1;
+    transition-delay: 0.3ms;
+}
+
+.sidebar {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: -10px;
+    height: 100%;
+    width: 250px;
+    border-radius: 15px;
+    background-color: rgba(95.47, 39.21, 174.25, 0.30);
+    box-shadow: 0px 0px 30px rgba(95, 39, 174, 0.3);
+    flex-direction: column;
+    gap: 20px;
+    color: #EEEEEE;
+    font-size: 20px;
+    z-index: 1;
+}
+
+.sidebar a {
+    display: block;
+    padding: 20px 25px;
+    margin-top: 20px;
+    text-decoration: none;
+    color: #EEEEEE;
+}
+
+.hamburger {
+    display: none;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    color: #EEEEEE;
+    font-size: 50px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+@media (max-width: 1012px) {
+    .navbar {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 860px) {
+    .navbar {
+        display: none;
+    }
+    .navbar a {
+        display: none;
+    }
+    .hamburger {
+        display: flex;
+    }
+}
+
