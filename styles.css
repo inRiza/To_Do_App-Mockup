@@ -75,11 +75,16 @@ body {
 }
 
 .sidebar a {
-    display: block;
+    display: none;
     padding: 20px 25px;
     margin-top: 20px;
     text-decoration: none;
     color: #EEEEEE;
+}
+
+.sidebar a:hover {
+    color: #b291e1;
+    text-decoration: underline #b291e1;
 }
 
 .hamburger {
@@ -111,5 +116,11 @@ body {
     .hamburger {
         display: flex;
     }
+    .sidebar a {
+        display: flex;
+    }
 }
+
+
+
 
