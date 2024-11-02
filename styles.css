@@ -35,13 +35,21 @@ body {
     box-shadow: 0px 0px 30px rgba(95, 39, 174, 0.3);
 }
 
-.navbar a {
+/* default nav */
+.nav_link {
     text-decoration: none;
     color: #EEEEEE;
     background-color: none;
     transition: 0.3s color;
     transition-delay: 0;
 }
+
+/* for active nav */
+.nav_link.active {
+    text-decoration: underline #b291e1;
+    color: #b291e1;
+}
+
 
 .navbar :hover {
     text-decoration: underline #b291e1;
