@@ -17,7 +17,7 @@ body {
 
 .page_container {
     width: 100vw;
-    height: 100vh;
+    height: 100%;
     overflow-x: hidden;
     display: flex;
     flex-direction: column;
@@ -170,7 +170,60 @@ body {
     font-size: 30px;
     border-radius: 15px;
     box-shadow: 0px 0px 30px rgba(95, 39, 174, 0.1);
+    cursor: pointer;
 }
+
+.timer_parent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.timer_child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 676px;
+    height: 209px;
+    margin-top: 94px;
+    font-size: 90px;
+    font-weight: 500;
+    border-radius: 50px;
+    padding: 10px;
+    background-color: #b291e1;
+    color: #EEEEEE;
+    box-shadow: 0px 0px 30px rgba(95, 39, 174, 0.1);
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    outline: none;
+    border-radius: 25px;
+    width: 444px;
+    height: 88px;
+    font-size: 50px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+#start {
+    margin-top: 94px;
+    background-color: #36bb7d;
+    color: #EEEEEE;
+    box-shadow: 0px 4px 50px rgba(54, 187, 125, 0.8);
+}
+
+#settings {
+    margin-top: 38px;
+    background-color: #5f27ae;
+    color: #EEEEEE;
+    box-shadow: 0px 0px 30px rgba(95, 39, 174, 0.1);
+}
+
 
 @media (max-width: 1012px) {
     .navbar {
