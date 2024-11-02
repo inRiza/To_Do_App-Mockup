@@ -24,3 +24,11 @@ function navClick(click) {
 document.querySelectorAll(".nav_link").forEach(link => {
     link.addEventListener("click", navClick);
 });
+
+/* for navigation to section page */
+function navigateTo(sectionId) {
+    const sections = document.querySelectorAll(".section");
+    sections.forEach(section => section.classList.remove("active")); 
+
+    document.getElementById(sectionId).classList.add("active");
+}
