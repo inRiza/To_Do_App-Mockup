@@ -7,20 +7,42 @@
     <title>To Do App</title>
 </head>
 <body>
-    <nav class="navbar">
-        <a href="#todo" class="nav_link active">To Do List</a>
-        <a href="#timer" class="nav_link">Timer</a>
-        <a href="#about"class="nav_link">About</a>
-    </nav>
 
-    <nav class="sidebar" id="sidebar">
-        <a href="#todo" class="nav_link active">To Do List</a>
-        <a href="#timer" class="nav_link">Timer</a>
-        <a href="#about" class="nav_link">About</a>
-    </nav>
+    <div class="page_container">
 
-    <button class="hamburger" onclick="sidebarClick()">&#9776;</button>
+        <!-- navbar & sidebar -->
 
+        <nav class="navbar">
+            <a href="#" class="nav_link active" onclick="navigateTo('todo')">To Do List</a>
+            <a href="#" class="nav_link" onclick="navigateTo('timer')">Timer</a>
+            <a href="#" class="nav_link" onclick="navigateTo('about')">About</a>
+        </nav>
+
+        <nav class="sidebar" id="sidebar">
+            <a href="#" class="nav_link active" onclick="navigateTo('todo')">To Do List</a>
+            <a href="#" class="nav_link" onclick="navigateTo('timer')">Timer</a>
+            <a href="#" class="nav_link" onclick="navigateTo('about')">About</a>
+        </nav>
+
+        <button class="hamburger" onclick="sidebarClick()">&#9776;</button>
+    
+        <!-- sections -->
+
+        <div id="todo" class="section active">
+            <h1>To Do App</h1>
+            <div class="input_parent">
+                <input type="text" placeholder="Add new task...">
+                <button>Add Task</button>
+            </div>
+        </div>
+        <div id="timer" class="section">
+            <h1>Timer</h1>
+        </div>
+        <div id="about" class="section">
+            <h1>About us</h1>
+        </div>
+    </div>
     <script src="script.js"></script>
+
 </body>
 </html>
