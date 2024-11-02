@@ -12,7 +12,16 @@ body {
     background: linear-gradient(180deg, #b291e1, #5f27ae);
     background-size: cover;
     background-repeat: no-repeat;
+    height: 1420px;
+}
+
+.page_container {
+    width: 100vw;
     height: 100vh;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .navbar {
@@ -65,7 +74,7 @@ body {
     height: 100%;
     width: 250px;
     border-radius: 15px;
-    background-color: rgba(95.47, 39.21, 174.25, 0.30);
+    background-color: rgba(95.47, 39.21, 174.25, 1);
     box-shadow: 0px 0px 30px rgba(95, 39, 174, 0.3);
     flex-direction: column;
     gap: 20px;
@@ -92,12 +101,75 @@ body {
     position: fixed;
     top: 20px;
     right: 20px;
-    background: none;
+    background: snone;
     border: none;
     color: #EEEEEE;
     font-size: 50px;
     cursor: pointer;
     z-index: 2;
+}
+
+.section {
+    display: none;
+}
+
+.section.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    max-width: 90%;
+}
+
+.section h1 {
+    display: block;
+    margin-top: 94px;
+    font-size: 80px;
+    color: #EEEEEE;
+}
+
+.input_parent {
+    display: flex;
+    flex-direction: row;
+    margin-top: 52px;
+    gap: 43px;
+}
+
+.input_parent input {
+    display: flex;
+    justify-content: flex-start;
+    width: 600px;
+    height: 78px;
+    padding: 10px 30px;
+    border-radius: 15px;
+    outline: none;
+    border: none;
+    box-sizing: border-box;
+    text-align: left;
+    background-color: #b291e1;
+    color: rgba(224, 224, 224, 0.6);
+    font-size: 30px;
+    box-shadow: 0px 0px 30px rgba(95, 39, 174, 0.1);
+}
+
+.input_parent input::placeholder {
+    text-align: left;
+    color: rgba(224, 224, 224, 0.6);
+    font-size: 30px;
+    font-style: italic;
+}
+
+.input_parent button {
+    display: block;
+    width: 50%;
+    border: none;
+    outline: none;
+    background-color: #b291e1;
+    color: #EEEEEE;
+    font-size: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 30px rgba(95, 39, 174, 0.1);
 }
 
 @media (max-width: 1012px) {
