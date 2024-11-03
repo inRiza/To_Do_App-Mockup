@@ -101,7 +101,7 @@ body {
     position: fixed;
     top: 20px;
     right: 20px;
-    background: snone;
+    background: none;
     border: none;
     color: #EEEEEE;
     font-size: 50px;
@@ -224,6 +224,78 @@ body {
     box-shadow: 0px 0px 30px rgba(95, 39, 174, 0.1);
 }
 
+.about_parent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.desc {
+    width: 1133px;
+    font-weight: 500;
+    color: #EEEEEE;
+    font-size: 50px;
+    display: inline-block;
+    text-align: center;
+    margin-top: 79px;
+}
+
+.task_parent {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 94px;
+}
+
+.task_child {
+    display: flexbox;
+    justify-content: left;
+    flex-direction: row;
+    position: relative;
+    width: 1140px;
+    min-height: 98px;
+    background-color: #b291e1;
+    color: #EEEEEE;
+    padding-left: 54px;
+    padding-top: 22px;
+    padding-bottom: 22px;
+    box-shadow: 0px 4px 30px rgba(95, 39, 174, 0.3);
+    margin-bottom: 62px;
+    border-radius: 15px;
+    font-size: 40px;
+    transition: background-color 0.3s ease;
+}
+
+.task_child span {
+    display: inline-block;
+    word-break: break-word;
+    max-width: 850px;
+}
+
+.task_child input[type="checkbox"] {
+    position: absolute;
+    right: 185px;
+    top: 30px;
+    width: 51px;
+    height: 51px;
+}
+
+.task_child button {
+    position: absolute;
+    right: 49px;
+    top: 30px;
+    width: 117px;
+    height: 51px;
+    padding: 10px;
+    align-items: center;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    border-radius: 15px;
+    background-color: #e14b4b;
+    color: #EEEEEE;
+}
 
 @media (max-width: 1012px) {
     .navbar {
