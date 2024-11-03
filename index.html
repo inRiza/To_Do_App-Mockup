@@ -31,8 +31,14 @@
         <div id="todo" class="section active">
             <h1>To Do App</h1>
             <div class="input_parent">
-                <input type="text" placeholder="Add new task...">
-                <button>Add Task</button>
+                <input type="text" id="inputTask" placeholder="Add new task...">
+                <button id="addNewTask">Add Task</button>
+            </div>
+            <div class="task_parent" id="taskList">
+                <!-- this where the task are put -->
+                 <!-- <div class="task_item" > 
+                    content
+                 </div>-->
             </div>
         </div>
         <div id="timer" class="section">
@@ -46,7 +52,10 @@
             </div>
         </div>
         <div id="about" class="section">
-            <h1>About us</h1>
+            <div class="about_parent">
+                <h1>About The App</h1>
+                <p class="desc">This is a mock-up for study tools app which contains To Do List and Timer feature. Feel free to use it!</p>
+            </div>
         </div>
     </div>
     <script src="script.js"></script>
