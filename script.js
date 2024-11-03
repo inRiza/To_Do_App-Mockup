@@ -87,4 +87,75 @@ function removeTask(taskDiv) {
     taskDiv.remove();
 }
 
+let countdown;
+let countdownTime = 25;
+let timeRemaining = countdownTime * 60;
+let isCountingDown = false;
 
+/* for countdown */
+function startCountdown() {
+    const button = document.getElementById(isCountingDown ? 'stop' : 'start');
+
+    if (isCountingDown) {
+        clearInterval(countdown);
+        button.textContent = "Start";
+        button.id = "start";
+        isCountingDown = false;
+        timeRemaining = countdownTime * 60;
+
+        document.querySelector('.countdown').textContent = 
+            `${countdownTime.toString().padStart(2, '0')}:00`;
+    } else {
+        countdown = setInterval(() => {
+            let minutes = Math.floor(timeRemaining / 60);
+            let seconds = timeRemaining % 60;
+
+            document.querySelector('.countdown').textContent = 
+                `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+            
+            timeRemaining--;
+
+            if (timeRemaining < 0) {
+                clearInterval(countdown);
+                document.querySelector('.countdown').textContent = "00:00";
+                button.textContent = "Start";
+                button.id = "start";
+                isCountingDown = false;
+            }
+        }, 1000);
+
+        button.textContent = "Stop";
+        button.id = "stop";
+        isCountingDown = true;
+    }
+}
+
+/* function for opening settings */
+function openSettings() {
+    document.querySelector(".settings_parent").style.display = "flex";
+}
+
+/* Save timer settings */
+function saveSettings() {
+    const timerInput = document.getElementById("inputTime");
+    const newTime = parseInt(timerInput.value);
+
+    if (!isNaN(newTime) && newTime > 0) {
+        countdownTime = newTime;
+        timeRemaining = countdownTime * 60;
+        document.querySelector(".countdown").textContent = 
+            `${countdownTime.toString().padStart(2, '0')}:00`;
+    }
+    closeSettings();
+}
+
+/* function for closing settings */
+function closeSettings() {
+    document.querySelector(".settings_parent").style.display = 'none';
+    document.getElementById("inputTime").value = '';
+}
+
+document.getElementById("start").addEventListener("click", startCountdown);
+document.getElementById("settings").addEventListener("click", openSettings);
+document.getElementById("saveSettings").addEventListener("click", saveSettings);
+document.getElementById("cancelSettings").addEventListener("click", closeSettings);
