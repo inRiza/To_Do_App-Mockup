@@ -217,6 +217,13 @@ body {
     box-shadow: 0px 4px 50px rgba(54, 187, 125, 0.8);
 }
 
+#stop {
+    margin-top: 94px;
+    background-color: #e14b4b;
+    color: #EEEEEE;
+    box-shadow: 0px 4px 50px rgba(225, 75, 75, 0.8);
+}
+
 #settings {
     margin-top: 38px;
     background-color: #5f27ae;
@@ -279,6 +286,7 @@ body {
     top: 30px;
     width: 51px;
     height: 51px;
+    cursor: pointer;
 }
 
 .task_child button {
@@ -295,7 +303,80 @@ body {
     border-radius: 15px;
     background-color: #e14b4b;
     color: #EEEEEE;
+    cursor: pointer;
 }
+
+
+.settings_parent {
+    display: none; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 3; 
+}
+
+.settings_child {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 908px;
+    height: 828px;
+    border-radius: 30px;
+    background-color: #ffff;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.25);
+}
+
+.settings_child span {
+    display: inline-block;
+    margin-bottom: 132px;
+    font-size: 90px;
+    font-weight: 500;
+    color: #5f27ae;
+}
+
+#inputTime {
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 438px;
+    height: 116px;
+    padding: 10px;
+    border-radius: 25px;
+    font-size: 50px;
+    font-weight: 500;
+    color: #5f27ae;
+    background-color: #EEEEEE;
+    border: none;
+    outline: none;
+}
+
+#inputTime::placeholder {
+    color: rgba(224, 224, 224, 0.6);
+    font-style: italic;
+}
+
+#saveSettings {
+    margin-top: 130px;
+    font-size: 50px;
+    background-color: #4CAF50;
+    color: white;
+}
+
+#cancelSettings {
+    margin-top: 38px;
+    font-size: 50px;
+    background-color: #f44336; /* Red for Cancel */
+    color: white;
+}
+
 
 @media (max-width: 1012px) {
     .navbar {
