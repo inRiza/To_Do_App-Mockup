@@ -257,6 +257,8 @@ body {
     align-items: center;
     flex-direction: column;
     padding-top: 63px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .task_child {
@@ -264,7 +266,8 @@ body {
     justify-content: left;
     flex-direction: row;
     position: relative;
-    width: 764px;
+    width: 90%;
+    max-width: 764px;
     min-height: 66px;
     background-color: #b291e1;
     color: #EEEEEE;
@@ -495,7 +498,24 @@ body {
     .timer_parent .btn {
         font-size: 30px;
     }
-
+    .task_child {
+        width: 100%;
+        font-size: 20px; 
+        padding: 10px 20px; 
+    }
+    .task_child span {
+        max-width: 100%; 
+        word-break: break-word;
+        font-size: 16px;
+    }
+    .task_child input[type="checkbox"],
+    .task_child button {
+        width: auto;
+    }
+    .task_child button {
+        font-size: 15px; 
+        padding: 5px 10px;
+    }
 }
 
 @media (max-width: 300px) {
@@ -503,7 +523,6 @@ body {
     .timer_child {
         font-size: 30px;
     }
-
     .timer_parent .btn{
         font-size: 18px;
     } 
