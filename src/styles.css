@@ -379,6 +379,7 @@ body {
     color: white;
 }
 
+/* responsive layout */
 @media (max-width: 1012px) {
     .navbar {
         font-size: 13px;
@@ -398,8 +399,117 @@ body {
     .sidebar a {
         display: flex;
     }
+    .settings_parent {
+        top: 150px;
+    }
+    .about_parent {
+        font-size: 40px;
+    }
+    .desc {
+        width: 80%;
+        max-width: 100%;
+        font-size: 30px;
+    }
 }
 
+@media (max-width: 680px) {
+    .input_parent {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        align-items: stretch;
+    }
+    .input_parent input,
+    .input_parent button {
+        width: 100%;
+    }
+    .section h1 {
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        font-size: 35px;
+    }
+    .input_parent button{
+        font-size: 15px;
+        padding: 10px;
+    }
+    .settings_parent {
+        display: flex;
+        align-items: stretch;
+        width: 100%;
+        max-width: 100%;
+        text-align: center;
+    }
+    .settings_child {
+        align-items: stretch;
+        width: 90%;
+        max-width: 100%;
+    }
+    #inputTime,
+    #saveSettings,
+    #cancelSettings {
+        display: flex;
+        align-items: stretch;
+        width: 80%;
+        max-width: 100%;
+        font-size: 18px;
+        padding: 10px;
+    }
+    #inputTime {
+        margin-left: 20px;
+        height: 40px;
+        width: 200px;
+        max-width: 100%;
+        padding: 5px;
+    }
+    #saveSettings,
+    #cancelSettings {
+        margin-left: 20px;
+        max-width: 90%;
+        align-items: stretch;
+    }
+    .settings_child span {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        font-size: 25px;
+    }
+    #inputTime {
+        align-items: stretch;
+        max-width: 80%;
+    }
+    .timer_parent,
+    .timer_child,
+    .timer_parent .btn {
+        width: 100%;
+        max-width: 100%;
+        font-size: 50px;
+    }
+    .timer_child {
+        display: flex;
+        width: 80%;
+        max-width: 100%;
+    }
+    .timer_parent .btn {
+        font-size: 30px;
+    }
+
+}
+
+@media (max-width: 300px) {
+    .timer_parent,
+    .timer_child {
+        font-size: 30px;
+    }
+
+    .timer_parent .btn{
+        font-size: 18px;
+    } 
+}
+
+/* animation for section */
 @keyframes slideInY {
     from {
         transform: translateY(-20%);
